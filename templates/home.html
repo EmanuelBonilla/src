@@ -1,34 +1,83 @@
 {% extends "layout.html"%}
 {%block content%}
-<style >
-  .image{
-            width: 500px; 
-        margin-left: 20px;
-         margin-right: 20px;
-          margin-top: 10px;
-          border-radius: 10px;
+<style>
+  .image {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .containerGO {
+    display: flex;
+    font-size: 32px;
+    margin-top: 40px;
+
+  }
+
+  .botonGO{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    background-color: rgba(109, 109, 109, 0.347);
+    color: white;
+    border-radius: 10px;
+    width: 200px;
   }
 </style>
-<div class="jumbotron" style="margin-bottom: 50px;">
+<div class="jumbotron" style="margin-bottom: 50px; margin-top: 2.5%;">
   <h1 class="display-4">Bienvenido a CompuPartes</h1>
   <p class="lead">El lugar donde encuentras todo de computadoras en todas partes</p>
   <hr class="my-4">
-  <p>Ir a la tienda</p>
-  <a class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</a>
-</div>
-<div >
-  <h3>Somos la mejor tienda de colombia </h3>
-  <div style="display: flex;">
-    
-    <div>
-    <img class="image" src="static/img/computadoras.jpg">  
-  </div>
-  <div>
-    <p style="font-size: 20px;">Nuestra compañia se encarga de vender toda clase de aparatos tecnlogicos para computadora ademas de que hace envios a todo el pais, cualquier parte de computadora que necesite la tenemos aqui.</p>
-  </div>
-  </div>
-  
 
-  
 </div>
+<div>
+  <div style="margin-left: 20px;">
+    <h3>CompuPartes</h3>
+    <p style="font-size: 20px;">CompuPartes es una compañia que se encarga de vender partes de computadoras y sus
+      perifericos, ademas de que hace envios a todo el pais, cualquier parte de computadora que necesite la tenemos
+      aqui.
+    </p>
+  </div>
+
+  <div style="margin-left: 20px; margin-top: 5%;">
+    <h3>Metodos de pago</h3>
+    <p style="font-size: 20px;">Aceptamos pagos con tarjeta de credito, debito, paypal, transferencia bancaria y
+      efectivo.
+    </p>
+  </div>
+  <h3 style="margin-left: 20px; margin-top: 7.5%;">Venta de computadoras y sus perifericos</h3>
+  <div style="display: flex;">
+
+    <div>
+      <img class="image" src="static/img/computadoras.jpg">
+    </div>
+    <div>
+      <p style="font-size: 20px;">Nuestra compañia se encarga de vender toda clase de perifericos tecnlogicos para
+        computadora ademas de que hace envios a todo el pais, cualquier parte de computadora que necesite la tenemos
+        aqui.
+      </p>
+
+      <div class="containerGO">
+        <div class="botonGO" style="margin-left: 10%;">
+          <p>Ir a la tienda</p>
+          <a class="btn btn-primary btn-lg" style="margin-bottom: 10px;" href="/shop" role="button">Comprar</a>
+        </div>
+        <div class="botonGO" style=" margin-left: 20%;">
+          <p >Nosotros</p>
+          <a class="btn btn-primary btn-lg" style="margin-bottom: 10px;"href="/about" role="button">Nosotros</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
+
+</div>
+
 {%endblock%}

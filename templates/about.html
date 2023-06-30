@@ -1,32 +1,74 @@
 {% extends "layout.html"%}
 {%block content%}
-<div class="container-fluid" style="background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #000;">
-    <div>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h1>Misión</h1>
-            <p>Nuestra misión en Compupartes es proporcionar a nuestros clientes una amplia variedad de partes de computadoras, accesorios y computadoras de calidad, junto con un servicio excepcional. Nos esforzamos por satisfacer las necesidades tecnológicas de nuestros clientes, brindándoles soluciones confiables y actualizadas para mejorar su experiencia informática.</p>
-        </div>
-        <div style="text-align: center;margin-bottom: 20px">
-            <h1>Visión</h1>
-            <p>En Compupartes, aspiramos a convertirnos en el principal referente en el mercado de venta de partes de computadoras y soluciones informáticas. Buscamos establecer relaciones duraderas con nuestros clientes, ser reconocidos por nuestro compromiso con la calidad y la excelencia en el servicio, y expandirnos a nivel nacional para llegar a un público más amplio.</p>
-        </div>
-        <div style="text-align: center;margin-bottom: 20px">
-            <h1>Quiénes somos</h1>
-            <p>En Compupartes, somos un equipo apasionado de expertos en tecnología y entusiastas de las computadoras. Contamos con una vasta experiencia en el campo de la informática y nos mantenemos al tanto de las últimas tendencias y avances tecnológicos. Nuestro conocimiento y compromiso nos permiten brindar asesoramiento experto y soluciones personalizadas a nuestros clientes.</p>
-        </div>
-        <div style="text-align: center;margin-bottom: 20px">
-            <h1>Nuestros clientes</h1>
-            <p>Nuestros clientes incluyen tanto usuarios domésticos como empresas de diferentes tamaños. Nos dirigimos a entusiastas de la tecnología que desean actualizar o personalizar sus equipos, así como a profesionales y empresas que requieren soluciones informáticas confiables y de calidad para sus operaciones diarias.</p>
-        </div>
-        <div style="text-align: center;margin-bottom: 20px">
-            <h1>Lugar</h1>
-            <p>Ubicaremos nuestro negocio Compupartes en una ubicación estratégica y de fácil acceso para nuestros clientes. Preferentemente, estará situado en una zona comercial con alta afluencia de personas y cerca de otras empresas relacionadas con la tecnología, en específico en el bulevar. Además, consideraremos la opción de tener una presencia en línea a través de una plataforma de comercio electrónico para llegar a clientes de todo el país.</p>
-        </div>
-        <div style="text-align: center;margin-bottom: 20px">
-            <h1>Productos</h1>
-            <p>En Compupartes, ofreceremos una amplia variedad de productos, que incluirán partes de computadoras como tarjetas madre, procesadores, tarjetas gráficas, memoria RAM, discos duros, fuentes de alimentación, entre otros. También proporcionaremos una selección de accesorios como teclados, ratones, monitores, auriculares, cables y adaptadores. Además, ofreceremos computadoras preensambladas de diferentes configuraciones para adaptarnos a las necesidades y presupuestos de nuestros clientes.</p>
-        </div>
+<h1 style="text-align: center;">Sobre Nosotros</h1>
+
+<div class="containerFather">
+    <div class="containerPro">
+        <h2 class="tituloH1">Misión</h1>
+        <p class="textP">Nuestra misión en Compupartes es proporcionar a nuestros clientes una amplia 
+            variedad de partes para PC o computadoras, accesorios y tambien computadoras de calidad, junto con un servicio excepcional.</p>
+    </div>
+
+    <div class="containerPro">
+        <h2 class="tituloH1">Visión</h1>
+        <p class="textP">En Compupartes, aspiramos a convertirnos en el principal referente en el mercado de venta de partes de computadoras.</p>
+        <img class="image" style="width: 40%; height: 40%; margin-left: 30%; margin-right: 30%;border-radius: 5%;" src="static/img/pibesvendiendo.jpg">
+    </div>
+
+    <div class="containerPro">
+        <h2 class="tituloH1">Quiénes somos</h1>
+        <p class="textP">En Compupartes, somos un equipo apasionado de expertos en tecnología y entusiastas de las computadoras. Contamos con una vasta experiencia en el campo de la informática y nos mantenemos al tanto de las últimas tendencias y avances tecnológicos.</p>
     </div>
 </div>
+
+<!-- soad-->
+
+<div class="containerFather" >
+    <div class="containerPro">
+        <h2 class="tituloH1">Nuestros clientes</h1>
+        <p class="textP">Nuestros clientes incluyen tanto usuarios domésticos como empresas de diferentes tamaños. Nos dirigimos a entusiastas de la tecnología que desean actualizar o personalizar sus equipos.</p>
+    </div>
+
+    <div class="containerPro">
+        <h2 class="tituloH1">Lugar</h1>
+        <p class="textP">Ubicaremos nuestro negocio Compupartes en una ubicación estratégica y de fácil acceso para nuestros clientes. Preferentemente, estará situado en una zona comercial con alta afluencia de personas.</p>
+    </div>
+
+    <div class="containerPro">
+        <h2 class="tituloH1">Productos</h1>
+        <p class="textP">En Compupartes, ofreceremos una amplia variedad de productos, que incluirán partes de computadoras como tarjetas madre, procesadores etc.</p>
+    </div>
+</div>
+
+<style>
+    .containerFather{
+        display: flex; 
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .containerPro{
+        margin-top: 2.5%;
+        display: flow;
+        color: #000000;
+	    background: #ffffff;  /* fallback for old browsers */
+        border-radius: 10px;
+        width: 330px;
+        height: 330px;
+        margin-right: 5%;
+    }
+    .tituloH1{
+        text-align: center;
+        margin-top: 10px;;
+    }
+    .textP{
+        display: flex; 
+        justify-content: center;
+        text-align:justify;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+</style>
 
 {%endblock%}

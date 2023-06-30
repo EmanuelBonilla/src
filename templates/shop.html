@@ -1,195 +1,107 @@
 {% extends "layout.html"%}
 {% block content %}
-<h1>
-    Bienvenido a CompuPartes
+<h1 style="text-align: center;">
+    Tienda
 </h1>
 <style>
-    .item{
-        width: 300px; 
-        margin-left: 20px;
-         margin-right: 20px;
-          margin-top: 10px;
-          border-radius: 10px;
+    .containerItems{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .containerItem{
-        display: flow;
-        text-align : center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        width: 300px;
+        height: 400px;
     }
-    .btn{
-        margin-bottom: 10px;
+    .imageObject{
+        margin-top: 10%;
+        width: 60%;
+        height: 30%;
     }
 </style>
-<div style="display: flow; ">
-    <div class="container-fluid" style="background: #fff; border-radius: 10px;  display: flex; align-items: center; width : 1400px; color: #000;margin-top: 20px;">
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
+<!-- First line-->
+<div class="containerItems">
+    <script>
+    let monitorGamer = 
+    {
+        nombre: "Monitor Gamer",
+        precio: 100,
+        imagen: "static/img/monitorGamer.jpeg",
+        descripcion: "Monitor Gamer de 144hz"
+    }
 
+    let Ram = 
+    {
+        nombre: "Memoria Ram DDR4",
+        precio: 50,
+        imagen: "static/img/Ram.png",
+        descripcion: "Memoria Ram de 8gb"
+    }
+    let tecladoRosa =
+    {
+        nombre: "Teclado Mecanico Rosa",
+        precio: 20,
+        imagen: "static/img/tecladoRosa.jpg",
+        descripcion: "Teclado Mecanico Rosa RGB con switches Cherry MX"
+    }
+    let tecladoGamer =
+    {
+        nombre: "Teclado Mecanico Gamer",
+        precio: 20,
+        imagen: "static/img/tecladoGamer.jpg",
+        descripcion: "Teclado Mecanico Gamer RGB con switches Cherry MX"
+    }
+    let CompuI7 = 
+    {
+        nombre: "Computadora Gamer ",
+        precio: 1000,
+        imagen: "static/img/CompuI7.jpeg",
+        descripcion: "Computadora Gamer con procesador Intel Core i7 de 12th generacion"
+    }
+    let Asus8Ram = 
+    {
+        nombre: "Laptop Asus 8gb Ram",
+        precio: 750,
+        imagen: "static/img/Asus8Ram.jpeg",
+        descripcion: "Laptop Asus con 8gb de Ram I5"
 
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
+    }
+    let MouseGamer =
+    {
+        nombre: "Mouse Gamer",
+        precio: 20,
+        imagen: "static/img/MouseGamer.jpeg",
+        descripcion: "Mouse Gamer con RGB duracion de 5M Clicks"
+    }
 
+    let objects = [monitorGamer, Ram, tecladoRosa, tecladoGamer, CompuI7, Asus8Ram, MouseGamer]; 
 
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
+    let Targets = 34;
+      for (var i = 0; i < Targets; i++) {
+        // Generar un índice aleatorio
+        let indiceAleatorio = Math.floor(Math.random() * objects.length);
 
+        // Acceder al elemento correspondiente al índice aleatorio
+        let elementoAleatorio = objects[indiceAleatorio];
 
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-    </div>
-    <div class="container-fluid" style="background: #fff; border-radius: 10px;  display: flex; align-items: center; width : 1400px; color: #000;margin-top: 20px;">
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-    </div>
-
-    <div class="container-fluid" style="background: #fff; border-radius: 10px;  display: flex; align-items: center; width : 1400px; color: #000;margin-top: 20px;">
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-    </div>
-        <div class="container-fluid" style="background: #fff; border-radius: 10px;  display: flex; align-items: center; width : 1400px; color: #000;margin-top: 20px;">
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-    </div>
-        <div class="container-fluid" style="background: #fff; border-radius: 10px;  display: flex; align-items: center; width : 1400px; color: #000;margin-top: 20px;">
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-        <div class="containerItem">
-            <img src="static/img/Ram.png" class="item">
-            </img>
-            <h4>Memoria Ram $45.000</h1>
-                  <buy class="btn btn-primary btn-lg" href="shop" role ="button">Comprar</buy>
-
-
-        </div>
-    </div>
-</div>
+        document.write('<div class="containerItem" style = "position: relative;">');
+        document.write('<h4 style="margin-top: 5%;">'+ elementoAleatorio.nombre +'</h4>');
+        document.write('<img class="imageObject" src="'+elementoAleatorio.imagen +'">');
+        document.write('<p style="font-weight: bold;">$'+ elementoAleatorio.precio +'</p>')
+        document.write('<p style = "margin-left: 3%;margin-right: 3%; text-align: center;">'+ elementoAleatorio.descripcion +' </p>')
+        document.write('<a class="btn btn-primary btn-lg" style=" position: absolute; bottom: 0; margin-bottom: 10px   " role="button">Comprar</a>')
+        document.write('</div>');
+      }
+    </script>
+  </div>
 {% endblock %}
